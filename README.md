@@ -38,8 +38,13 @@ _Good luck, and have fun with this_! :rocket:
 
 ## Write-up
 
-Give a brief summary of the approach you took, and why! Include your model's
-accuracy/precision/recall scores as well!
+I chose to use a Random Forest model because they're flexible at detecting non-linear
+behavior, which is good for this dataset since the high risk demographics arn't scattered
+in a linear fashion.
+
+Accuracy: 80.853%, Precision: 60.815%, Recall: 33.006% 
+
+
 
 
 ## Data Format
