@@ -1,4 +1,5 @@
 import numpy as np
+from sklearn.ensemble import RandomForestClassifier
 
 
 class CreditModel:
@@ -8,7 +9,7 @@ class CreditModel:
         """
 
         # TODO: Initialize your model object.
-        pass
+        self.forest = RandomForestClassifier(n_estimators=10, random_state=17)
 
     def fit(self, X_train, y_train):
         """
@@ -19,7 +20,7 @@ class CreditModel:
         """
 
         # TODO: Fit your model based on the given X and y.
-        pass
+        self.forest.fit(X_train, y_train)
 
     def predict(self, X_test):
         """
@@ -30,4 +31,5 @@ class CreditModel:
         """
 
         # TODO: Predict on `X_test` based on what you learned in the fit phase.
-        return np.random.randint(2, size=len(X_test))
+        return self.forest.predict(X_test)
+        
